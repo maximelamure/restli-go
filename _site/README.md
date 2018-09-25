@@ -30,8 +30,8 @@ Create a PullRequest
 ### How to
 
 The documentation should use the markdown syntax and be in a `.md` file.
-Each documentation page should contain a `page front matter` to specify which navigation menu to display on the left. More info [here](https://jekyllrb.com/tutorials/navigation/#scenario-5-using-a-page-variable-to-select-the-yaml-list)
-The navigation menus use YAML files to generate navigation items. More info
-[here](https://jekyllrb.com/tutorials/navigation/)
+Each documentation page should contain a `page front matter` to specify which navigation menu to display on the left. More info [https://jekyllrb.com/tutorials/navigation/#scenario-5-using-a-page-variable-to-select-the-yaml-list](here)
+The navigation menus use YAML files to generate navigation items. More info 
+[https://jekyllrb.com/tutorials/navigation/](here)
 
-Jekyll tutorial: https://jekyllrb.com/tutorials/home/
+Jekyll tutorial: https://jekyllrb.com/tutorials/home/ 
