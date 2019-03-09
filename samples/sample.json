@@ -1,0 +1,26 @@
+{
+    "name" : "profiles",
+    "namespace" : "com.linkedin.bootcampbackend",
+    "path" : "/profiles",
+    "schema" : "com.linkedin.bootcampbackend.Profile",
+    "doc" : "Rest.li resource implementation class. Handles CREATE, GET, UPDATE and DELETE methods.\n <p>\n Resources should be fairly thin and focus on defining your service's public interface. Most logic should be defined\n at the service level.\n <p>\n The {@link Profile} object is automatically generated from Profile.pdsc.\n\ngenerated from: com.linkedin.bootcampbackend.impl.rest.ProfileResource",
+    "collection" : {
+      "identifier" : {
+        "name" : "profilesId",
+        "type" : "long"
+      },
+      "supports" : [ "create", "delete", "get", "update" ],
+      "methods" : [ {
+        "method" : "create"
+      }, {
+        "method" : "get"
+      }, {
+        "method" : "update"
+      }, {
+        "method" : "delete"
+      } ],
+      "entity" : {
+        "path" : "/profiles/{profilesId}"
+      }
+    }
+  }
