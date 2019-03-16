@@ -32,3 +32,11 @@ The `pdsc/idl directory` are the directories that contain the pdsc and idl files
 If an extension file is not recognized, the file will be ignored.
 
 example: `restli-go ./generated ./samples`
+
+## Client
+
+The repo comes from examples to illustrate the code generated.
+
+To run the code generation on the examples: `restli-go ./generated ./samples`
+
+Simple Get Request: `p, err := generated.GetProfile(context.Background(), 1)`
