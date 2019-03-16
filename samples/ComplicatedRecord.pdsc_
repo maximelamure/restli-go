@@ -1,0 +1,116 @@
+{ 
+  "type": "record", 
+  "name": "ComplicatedRecord", 
+  "doc": "Record which has complex fields purely meant for testing the micro schema generation.", 
+  "namespace": "com.linkedin.deco.generator", 
+  "fields": [ 
+    { 
+      "name": "enum", 
+      "type": "SimpleEnum",
+      "doc": "SimpleEnum",
+      "optional" : "true"
+    }, 
+    { 
+      "name": "fixed", 
+      "type": "Fixed" 
+    }, 
+    { 
+      "name": "typerefToPrimitive", 
+      "type": { 
+        "type": "typeref", 
+        "name": "NamedBoolean", 
+        "ref": "boolean" 
+      } 
+    }, 
+    { 
+      "name": "typerefToArray", 
+      "type": { 
+        "type": "typeref", 
+        "name": "NamedStringArray", 
+        "ref": { 
+          "type": "array", 
+          "items": "string" 
+        } 
+      } 
+    }, 
+    { 
+      "name": "typerefToMap", 
+      "type": { 
+        "type": "typeref", 
+        "name": "NamedLongMap", 
+        "ref": { 
+          "type": "map", 
+          "values": "long" 
+        } 
+      } 
+    }, 
+    { 
+      "name": "typerefToUnion", 
+      "type": "NamedUnion" 
+    }, 
+    { 
+      "name": "primitiveArray", 
+      "type": { 
+        "type": "array", 
+        "items": "bytes" 
+      } 
+    }, 
+    { 
+      "name": "enumArray", 
+      "type": { 
+        "type": "array", 
+        "items": "SimpleEnum" 
+      } 
+    }, 
+    { 
+      "name": "primitiveMap", 
+      "type": { 
+        "type": "map", 
+        "values": "float" 
+      } 
+    }, 
+    { 
+      "name": "enumMap", 
+      "type": { 
+        "type": "map", 
+        "values": "SimpleEnum" 
+      } 
+    }, 
+    { 
+      "name": "union", 
+      "type": [ 
+        "null", 
+        "string", 
+        "SimpleEnum", 
+        "SimpleRecord", 
+        { 
+          "type": "array", 
+          "items": "long" 
+        }, 
+        { 
+          "type": "map", 
+          "values": "boolean" 
+        } 
+      ] 
+    }, 
+    { 
+      "name": "unionWithAliases", 
+      "type": [ 
+        "null", 
+        { "alias": "str", "type": "string" }, 
+        { "alias": "enu", "type": "SimpleEnum" }, 
+        { "alias": "rec", "type": "SimpleRecord" }, 
+        { "alias": "arr", "type": { "type": "array", "items": "int" } }, 
+        { "alias": "arrOfArr", "type": { "type": "array", "items": { "type": "array", "items": "int" } } }, 
+        { "alias": "arrOfMap", "type": { "type": "array", "items": { "type": "map", "values": "int" } } }, 
+        { "alias": "map", "type": { "type": "map", "values": "double" } }, 
+        { "alias": "mapOfMap", "type": { "type": "map", "values": { "type": "map", "values": "double" } } }, 
+        { "alias": "mapOfArr", "type": { "type": "map", "values": { "type": "array", "items": "double" } } } 
+      ] 
+    }, 
+    { 
+      "name": "urn", 
+      "type": "com.linkedin.common.Urn" 
+    } 
+  ] 
+}

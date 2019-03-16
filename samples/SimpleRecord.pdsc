@@ -1,0 +1,41 @@
+{
+  "type" : "record",
+  "name" : "Profile",
+  "namespace" : "com.linkedin.bootcampbackend",
+  "doc" : "Member profile used in New Hire Onboarding Hands-on Exercise",
+  "fields" : [
+    {
+      "name": "id",
+      "doc" : "A unique primary key for this member profile",
+      "type": "long"
+    },
+    {
+      "name": "firstName",
+      "doc" : "First name of this member",
+      "type": "string"
+    },
+    {
+      "name": "lastName",
+      "doc" : "Last name of this member",
+      "type": "string"
+    },
+    {
+      "name": "headline",
+      "doc" : "Headline of this member",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "location",
+      "doc" : "Primary location of this member",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "title",
+      "doc": "Work tile of this member",
+      "type": "string",
+      "optional": true
+    }
+  ]
+}
